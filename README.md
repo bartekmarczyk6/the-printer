@@ -71,7 +71,30 @@ Test files are located in the `test/` directory and include flash loan transacti
 
 ## 6. Deployment
 
-[FlashRouter contract deployment instructions would go here]
+### FlashRouter Contract Deployment Instructions
+
+1.  **Prerequisites:**
+    *   Ensure you have Hardhat installed and configured for your desired network (e.g., Polygon, BSC).
+    *   Make sure you have the necessary environment variables set up, such as your private key and RPC endpoint.
+
+2.  **Deployment Script:**
+    *   The project includes a deployment script located at `scripts/flash_loan.mjs`. This script compiles and deploys the `FlashRouter` contract.
+    *   **Note:** This script currently deploys the contract without constructor arguments. You will need to modify it to include the addresses of the Uniswap V3 and V2 routers.
+
+3.  **Deploy the Contract:**
+    *   Run the deployment script using Hardhat:
+        ```bash
+        npx hardhat run scripts/flash_loan.mjs --network <your_network_name>
+        ```
+        *   Replace `<your_network_name>` with the name of the network you want to deploy to (e.g., `polygon`, `bsc`).
+
+4.  **Verification (Optional):**
+    *   After successful deployment, you can verify the contract on the block explorer using Hardhat's verification plugin.
+    *   Refer to the Hardhat documentation for instructions on how to verify contracts.
+
+5.  **Post-Deployment:**
+    *   Record the deployed contract address.
+    *   You can now interact with the deployed `FlashRouter` contract using its ABI and address.
 
 ## 7. Security
 

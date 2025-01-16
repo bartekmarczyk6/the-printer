@@ -12,6 +12,9 @@ async function main() {
   // Get the contract factory for FlashRouter
   const flashRouterFactory = await hre.ethers.getContractFactory("FlashRouter");
 
+  const uniswapV3RouterAddress = "0xE592427A0AEce92De3Edee1F18E0157C05861564"; // Polygon mainnet
+  const uniswapV2RouterAddress = "0xedf6066a2b290C185783862C7F4776A2C8077AD1"; // Polygon mainnet
+
   // Deploy the contract
   const flashLoanContract = await flashRouterFactory.deploy();
 
